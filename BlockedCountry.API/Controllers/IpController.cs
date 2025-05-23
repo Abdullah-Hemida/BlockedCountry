@@ -31,9 +31,12 @@ namespace BlockedCountry.API.Controllers
         }
 
         [HttpGet("check-block")]
-        public async Task<IActionResult> CheckBlock()
+        public async Task<IActionResult> CheckBlock([FromQuery] string? ipAddress)
         {
-            var ip = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "";
+            var ip = string.IsNullOrWhiteSpace(ipAddress)
+                    ? HttpContext.Connection.RemoteIpAddress?.ToString() ?? ""
+                    : ipAddress;
+
             var userAgent = Request.Headers.UserAgent.ToString();
 
             var ipInfo = await _ipLookupService.LookupAsync(ip);

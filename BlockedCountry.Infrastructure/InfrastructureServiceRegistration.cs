@@ -18,7 +18,7 @@ namespace BlockedCountry.Infrastructure
 
             // External Services
             services.AddHttpClient<IIpLookupService, IpLookupService>();
-
+            services.AddHttpClient<ICountryLookupService, RestCountriesService>();
             return services;
         }
     }

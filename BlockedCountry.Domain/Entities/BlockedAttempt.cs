@@ -1,5 +1,4 @@
 ﻿namespace BlockedCountry.Domain.Entities;
-
 public class BlockedAttempt
 {
     public string IpAddress { get; set; } = string.Empty;

@@ -1,7 +1,6 @@
 ﻿using BlockedCountry.Application.IExternalServices;
 using BlockedCountry.Contracts.DTOs;
 using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
 using System.Net;
 using System.Text.Json;
 using Microsoft.AspNetCore.Http;
@@ -25,13 +24,14 @@ namespace BlockedCountry.Infrastructure.ExternalServices
         {
             if (string.IsNullOrWhiteSpace(ipAddress))
             {
-                ipAddress = _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString();
+                var remoteIp = _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress;
+                ipAddress = remoteIp?.ToString() ?? throw new ArgumentNullException("IP address cannot be resolved.");
             }
 
             if (!IPAddress.TryParse(ipAddress, out _))
                 throw new ArgumentException("Invalid IP address format.");
 
-            var apiKey = _configuration["IpGeolocation:ApiKey"];
+            var apiKey = _configuration["IpApiSettings:ApiKey"];
             var url = $"https://api.ipgeolocation.io/ipgeo?apiKey={apiKey}&ip={ipAddress}";
 
             var response = await _httpClient.GetAsync(url);
@@ -49,10 +49,10 @@ namespace BlockedCountry.Infrastructure.ExternalServices
 
             return new IpLookupResponse
             {
-                Ip = root.GetProperty("ip").GetString(),
-                CountryCode = root.GetProperty("country_code2").GetString(),
-                CountryName = root.GetProperty("country_name").GetString(),
-                Isp = root.GetProperty("isp").GetString()
+                Ip = root.GetProperty("ip").GetString() ?? "N/A",
+                CountryCode = root.GetProperty("country_code2").GetString() ?? throw new InvalidOperationException("Missing country_code2"),
+                CountryName = root.GetProperty("country_name").GetString() ?? "Unknown",
+                Isp = root.GetProperty("isp").GetString() ?? "Unknown ISP"
             };
         }
     }

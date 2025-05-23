@@ -9,5 +9,4 @@ namespace BlockedCountry.Contracts.DTOs
         public DateTime Timestamp { get; set; }
         public string UserAgent { get; set; } = string.Empty;
     }
-
 }
