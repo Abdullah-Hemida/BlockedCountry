@@ -47,3 +47,10 @@ Each request was validated for:
 - Correct HTTP status codes (`200`, `400`, `404`, `409`)
 - Functional logic (e.g., block/unblock, check-block, lookup)
 - Edge cases (missing fields, invalid IPs, wrong country codes)
+  
+## ⚙️ Setup Instructions
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/your-username/BlockedCountry.git
+   cd BlockedCountry
