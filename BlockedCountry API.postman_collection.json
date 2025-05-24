@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "e5230478-9fc7-4800-9b9b-b74fe76f5f53",
+		"name": "BlockedCountry API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40442889"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Countries",
+					"item": [
+						{
+							"name": "block",
+							"item": [
+								{
+									"name": "{countryCode}",
+									"item": [
+										{
+											"name": "/api/Countries/block/:countryCode",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Countries/block/:countryCode",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Countries",
+														"block",
+														":countryCode"
+													],
+													"variable": [
+														{
+															"key": "countryCode",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/Countries/block/:countryCode",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"Countries",
+																"block",
+																":countryCode"
+															],
+															"variable": [
+																{
+																	"key": "countryCode"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "/api/Countries/block",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"countryCode\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Countries/block",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Countries",
+												"block"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"countryCode\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Countries/block",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Countries",
+														"block"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "blocked",
+							"item": [
+								{
+									"name": "/api/Countries/blocked",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Countries/blocked?filter=<string>&page=1&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Countries",
+												"blocked"
+											],
+											"query": [
+												{
+													"key": "filter",
+													"value": "<string>"
+												},
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Countries/blocked?filter=<string>&page=1&pageSize=10",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Countries",
+														"blocked"
+													],
+													"query": [
+														{
+															"key": "filter",
+															"value": "<string>"
+														},
+														{
+															"key": "page",
+															"value": "1"
+														},
+														{
+															"key": "pageSize",
+															"value": "10"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "temporal-block",
+							"item": [
+								{
+									"name": "/api/Countries/temporal-block",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"countryCode\": \"<string>\",\n  \"durationMinutes\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Countries/temporal-block",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Countries",
+												"temporal-block"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"countryCode\": \"<string>\",\n  \"durationMinutes\": \"<integer>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Countries/temporal-block",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Countries",
+														"temporal-block"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Ip",
+					"item": [
+						{
+							"name": "lookup",
+							"item": [
+								{
+									"name": "/api/Ip/lookup",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Ip/lookup?ipAddress=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Ip",
+												"lookup"
+											],
+											"query": [
+												{
+													"key": "ipAddress",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Ip/lookup?ipAddress=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Ip",
+														"lookup"
+													],
+													"query": [
+														{
+															"key": "ipAddress",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "check-block",
+							"item": [
+								{
+									"name": "/api/Ip/check-block",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Ip/check-block?ipAddress=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Ip",
+												"check-block"
+											],
+											"query": [
+												{
+													"key": "ipAddress",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Ip/check-block?ipAddress=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Ip",
+														"check-block"
+													],
+													"query": [
+														{
+															"key": "ipAddress",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Logs",
+					"item": [
+						{
+							"name": "blocked-attempts",
+							"item": [
+								{
+									"name": "/api/Logs/blocked-attempts",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Logs/blocked-attempts?page=1&pageSize=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Logs",
+												"blocked-attempts"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Logs/blocked-attempts?page=1&pageSize=10",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Logs",
+														"blocked-attempts"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														},
+														{
+															"key": "pageSize",
+															"value": "10"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
