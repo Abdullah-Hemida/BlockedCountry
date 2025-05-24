@@ -35,3 +35,15 @@ BlockedCountry
 - Clean Architecture
 - In-memory repositories
 - Swagger (OpenAPI)
+
+---
+
+## 🧪 API Testing
+
+All endpoints were tested manually using **Postman**.  
+Each request was validated for:
+
+- Input validation (valid and invalid data)
+- Correct HTTP status codes (`200`, `400`, `404`, `409`)
+- Functional logic (e.g., block/unblock, check-block, lookup)
+- Edge cases (missing fields, invalid IPs, wrong country codes)

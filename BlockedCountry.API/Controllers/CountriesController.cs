@@ -57,11 +57,8 @@ public class CountriesController : ControllerBase
     [HttpPost("temporal-block")]
     public async Task<IActionResult> TemporarilyBlock([FromBody] TemporalBlockRequest request)
     {
-        if (!IsValidCountryCode(request.CountryCode))
-            return BadRequest("Invalid country code.");
-
-        if (request.DurationMinutes < 1 || request.DurationMinutes > 1440)
-            return BadRequest("Duration must be between 1 and 1440 minutes.");
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
 
         try
         {
