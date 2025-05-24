@@ -3,15 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockedCountry.API", "BlockedCountry.API\BlockedCountry.API.csproj", "{8CA2610B-69D1-45BC-B6AB-939FA809044E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlockedCountry.API", "BlockedCountry.API\BlockedCountry.API.csproj", "{8CA2610B-69D1-45BC-B6AB-939FA809044E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockedCountry.Application", "BlockedCountry.Application\BlockedCountry.Application.csproj", "{6B64D7FC-09F6-4F05-A8ED-211B29755C59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlockedCountry.Application", "BlockedCountry.Application\BlockedCountry.Application.csproj", "{6B64D7FC-09F6-4F05-A8ED-211B29755C59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockedCountry.Domain", "BlockedCountry.Domain\BlockedCountry.Domain.csproj", "{013BACCF-EA47-40D1-8D5D-032F61353038}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlockedCountry.Domain", "BlockedCountry.Domain\BlockedCountry.Domain.csproj", "{013BACCF-EA47-40D1-8D5D-032F61353038}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockedCountry.Infrastructure", "BlockedCountry.Infrastructure\BlockedCountry.Infrastructure.csproj", "{FCAA1219-BBCB-428A-ACBE-F0C3CB2F0F72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlockedCountry.Infrastructure", "BlockedCountry.Infrastructure\BlockedCountry.Infrastructure.csproj", "{FCAA1219-BBCB-428A-ACBE-F0C3CB2F0F72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockedCountry.Contracts", "BlockedCountry.Contracts\BlockedCountry.Contracts.csproj", "{7AB54FEC-98B6-4B3F-9729-58A0E851827A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlockedCountry.Contracts", "BlockedCountry.Contracts\BlockedCountry.Contracts.csproj", "{7AB54FEC-98B6-4B3F-9729-58A0E851827A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6C5C272E-4144-4CB1-AF65-AC4782A66909}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
